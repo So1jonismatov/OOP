@@ -4,21 +4,22 @@
 #include <vector>
 #include <raylib.h>
 
-extern const Color darkGrey = {26, 31, 40, 255};
-extern const Color green = {47, 230, 23, 255};
-extern const Color red = {232, 18, 18, 255};
-extern const Color orange = {226, 116, 17, 255};
-extern const Color yellow = {237, 234, 4, 255};
-extern const Color purple = {166, 0, 247, 255};
-extern const Color cyan = {21, 204, 209, 255};
-extern const Color blue = {13, 64, 216, 255};
-extern const Color lightBlue = {59, 85, 162, 255};
-extern const Color darkblue = {44, 44, 127, 255};
+// Only declarations here (no = {...})
+extern Color darkGrey;
+extern Color green;
+extern Color red;
+extern Color orange;
+extern Color yellow;
+extern Color purple;
+extern Color cyan;
+extern Color blue;
+extern Color lightBlue;
+extern Color darkblue;
 
-std::vector<Color> GetCellColors(){
-    return {darkGrey, green, red, orange, yellow, purple, cyan, blue};
-}
-
+std::vector<Color> GetCellColors();
+Color RandomColor();
+std::vector<Color> GetRandomCellColors();
+std::vector<Color> SetOriginalColors();
 
 
 #endif
