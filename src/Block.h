@@ -59,10 +59,10 @@ public:
 
 
 
-    void Draw(){
+    void Draw(int offsetx, int offsety){
         std::vector<Position> tiles = GetCellPositons();
         for( Position item : tiles){
-            DrawRectangle(item.column * cellSize, item.row * cellSize, cellSize - 1, cellSize - 1, colors[id]);
+            DrawRectangle(item.column * cellSize  + offsetx , item.row * cellSize + offsety, cellSize - 1, cellSize - 1, colors[id]);
         }
     }
 
